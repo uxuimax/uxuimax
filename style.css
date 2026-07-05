@@ -1,4 +1,139 @@
-:root{--bg:#f7f8fb;--accent:#0366d6}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:#222;margin:0;padding:2rem}
-header{margin-bottom:1rem}
-button{background:var(--accent);color:#fff;border:none;padding:.5rem 1rem;border-radius:6px;cursor:pointer}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {margin: 0;padding: 0;box-sizing: border-box;}
+
+body {font-family: "Inter", serif;font-optical-sizing: auto;font-weight: 500;font-style: normal;
+	overflow: hidden;
+	background-color:#010101;color:#f2f2f2;}
+
+header{display:block;position:absolute:top:0;width:100%;height:60px;margin-bottom:40px;}
+.logo{height:32px;fill:#f2f2f2;margin-top:20px;}
+.icon{height:18px;float:right;margin-left:20px;margin-top:30px;fill:#f2f2f2;transition: fill 0.3s ease;}
+.icon:hover{fill:#808080;}
+	
+.container {position: relative;width: 100vw;display: block;padding:0 40px;;
+	z-index: 2;
+    animation: fadeInContainer 1s ease forwards;
+       animation-delay: 0.5s;}
+
+/* Links Style */
+.links {list-style: none;}
+.huge li{margin-bottom:5px;}
+.smaller li{margin-bottom:15px;}
+.link {color:#fafafa;text-decoration: none;transition: color 0.3s ease;}
+.link:hover {color: #808080;}
+
+.huge{font-size:48px;margin-bottom:60px;}
+.smaller{font-size: 18px;}
+.darker{color:#808080;}
+
+/* Background Media Styles */
+.background-video,
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+/* Hidden class to hide elements */
+.hidden {
+    display: none;
+}
+
+
+/* mobile */
+@media screen and (max-width: 479px) {
+.container {padding:0 20px;z-index: 2;}
+header{margin-bottom:60px;}
+.huge{font-size:32px;margin-bottom:60px;}
+.smaller{font-size: 18px;}
+.icon{margin-right:0;margin-top:25px;margin-right:20px;}
+.huge li{margin-bottom:20px;}
+}
+
+/* Apply initial hidden state to header and links */
+header, .links li {
+    opacity: 0;
+}
+/* Fade-in Animation for Header and Links */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInContainer {
+    to { opacity: 1; }
+}
+
+
+
+.error{
+  animation: glitch 1s linear infinite;
+  font-size:100px;font-weight:600;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.error:before,
+.error:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.error:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.error:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+
+
+
+
+
