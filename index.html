@@ -1,20 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My GitHub Page</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,shrink-to-fit=no">
+    <title>Hadži Marko</title>
+	<meta name="description" content="art. design. culture. travel. minimalism. journalism.">
+	<meta name="robots" content="index,follow">
+	<meta name="googlebot" content="index,follow">
+	<meta name="author" content="uxuimax">
+	<meta name="keywords" content="hadzi marko, uxuimax, art, ux, ui, web design, design, culture, travel, minimalism, journalism ">
+	<meta name="image" content="media/hadzimarko.jpg">
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="media/favicon.ico" sizes="32x32">
+	<link rel="shortcut icon" href="media/favicon.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="mask-icon" href="media/icon.svg" color="white">
+	<link rel="icon" href="media/icon.svg" type="image/svg+xml">
+	<link rel="icon" sizes="180x180" href="media/icon.png">	
 </head>
 <body>
-  <header>
-    <h1>Hello from uxuimax</h1>
-    <p>This is a GitHub Pages demo.</p>
-  </header>
-  <main>
-    <button id="btn">Click me</button>
-    <div id="result"></div>
-  </main>
-  <script src="script.js"></script>
+<div class="container" id="mainContainer">
+	<header>
+<svg class="logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path d="M100 100H0V0l49.86 50.14L100 0v100Z"/></svg>
+	<a href="mailto:uxuimax@gmail.com" target="_blank"><svg class="icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26 21"><path  d="M5.41.996c-1.186 0-2.26.498-3.03 1.293-.01.008-.021.015-.03.024a.093.093 0 0 0-.01.021 4.208 4.208 0 0 0-1.156 2.893v11.145c0 2.327 1.9 4.232 4.225 4.232h15.83c2.325 0 4.225-1.904 4.225-4.232V5.227a4.211 4.211 0 0 0-1.145-2.883v-.002l-.022-.029-.013-.009A4.21 4.21 0 0 0 21.24.996H5.411Zm0 1.36h15.831c.548 0 1.056.154 1.49.417l-8.646 7.511c-.435.38-1.064.372-1.53-.012L3.92 2.774a2.854 2.854 0 0 1 1.49-.417v-.001ZM2.96 3.74l8.716 7.57c.004.003.009.008.014.01.946.778 2.34.81 3.286-.011l8.715-7.57c.26.432.412.939.412 1.485V16.37a2.858 2.858 0 0 1-2.861 2.874H5.41a2.86 2.86 0 0 1-2.865-2.874V5.225c0-.546.153-1.053.414-1.485v.001Z"/><path  fill-rule="evenodd" d="M24.319 2.342v.002a4.211 4.211 0 0 1 1.145 2.883v11.145c0 2.328-1.9 4.232-4.224 4.232H5.409c-2.325 0-4.225-1.905-4.225-4.232V5.227c0-1.119.442-2.135 1.155-2.893a.093.093 0 0 1 .01-.02c.01-.01.02-.017.031-.025A4.209 4.209 0 0 1 5.41.996h15.831a4.21 4.21 0 0 1 3.043 1.308l.013.01.011.014.01.014Zm.091-.19A4.405 4.405 0 0 0 21.241.8H5.411a4.404 4.404 0 0 0-3.16 1.34.38.38 0 0 0-.04.035l-.01.01-.008.01a.247.247 0 0 0-.017.027A4.403 4.403 0 0 0 .988 5.227v11.145c0 2.435 1.987 4.428 4.42 4.428H21.24c2.433 0 4.42-1.992 4.42-4.428V5.227a4.406 4.406 0 0 0-1.182-3l-.007-.008-.002-.003-.007-.01a.34.34 0 0 0-.014-.018l-.018-.022-.02-.013Zm-19 .205a2.852 2.852 0 0 0-1.49.417l8.634 7.498c.467.384 1.096.392 1.531.012l8.646-7.511a2.86 2.86 0 0 0-1.49-.417H5.411v.001Zm.168.195v.001H5.41c-.412 0-.8.093-1.148.259l8.419 7.31c.4.327.919.325 1.276.014l8.432-7.325a2.662 2.662 0 0 0-1.148-.26H5.578ZM2.96 3.742l-.002.001a2.86 2.86 0 0 0-.412 1.482V16.37a2.86 2.86 0 0 0 2.865 2.874h15.83a2.858 2.858 0 0 0 2.862-2.874V5.225a2.871 2.871 0 0 0-.412-1.485l-8.715 7.57c-.945.82-2.34.789-3.287.012l-.006-.005-.007-.006-8.716-7.57Zm.055.306a2.663 2.663 0 0 0-.273 1.177V16.37a2.663 2.663 0 0 0 2.669 2.678h15.83c1.48 0 2.666-1.19 2.666-2.678V5.225c0-.424-.099-.823-.272-1.177l-8.53 7.41c-1.02.886-2.52.85-3.535.02a.452.452 0 0 1-.006-.005l-.003-.003-.004-.003-8.542-7.419Z" clip-rule="evenodd"/></svg></a> <a href="https://www.linkedin.com/in/uxuimax/" target="_blank" title="LinkedIn Profile">
+<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M92.598 0H7.383C3.3 0 0 3.223 0 7.207v85.566C0 96.758 3.3 100 7.383 100h85.215c4.082 0 7.402-3.242 7.402-7.207V7.207C100 3.223 96.68 0 92.598 0Zm-62.93 85.215H14.824V37.48h14.844v47.735Zm-7.422-54.238c-4.765 0-8.613-3.848-8.613-8.594 0-4.746 3.848-8.594 8.613-8.594a8.594 8.594 0 0 1 8.594 8.594c0 4.726-3.848 8.594-8.594 8.594Zm62.969 54.238H70.39V62.012c0-5.528-.098-12.657-7.715-12.657-7.715 0-8.887 6.036-8.887 12.266v23.594H38.984V37.48h14.22v6.524h.194c1.973-3.75 6.817-7.715 14.024-7.715 15.02 0 17.793 9.883 17.793 22.734v26.192Z"/>
+</svg>
+</a> <a href="https://www.instagram.com/hadzimare/" target="_blank"><svg class="icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path  d="M10 1.8c2.672 0 2.988.012 4.04.06.976.042 1.503.206 1.855.343.464.18.8.399 1.148.746.352.352.566.684.746 1.149.137.351.3.882.344 1.855.047 1.055.058 1.371.058 4.04 0 2.671-.011 2.987-.058 4.038-.043.977-.207 1.504-.344 1.856-.18.465-.398.8-.746 1.148a3.077 3.077 0 0 1-1.148.746c-.352.137-.883.301-1.856.344-1.055.047-1.371.059-4.039.059-2.672 0-2.988-.012-4.04-.059-.976-.043-1.503-.207-1.855-.344-.464-.18-.8-.398-1.148-.746a3.076 3.076 0 0 1-.746-1.148c-.137-.352-.3-.883-.344-1.856-.047-1.054-.058-1.37-.058-4.039 0-2.672.011-2.988.058-4.039.043-.976.207-1.504.344-1.855.18-.465.398-.801.746-1.149a3.076 3.076 0 0 1 1.148-.746c.352-.137.883-.3 1.856-.344 1.05-.046 1.367-.058 4.039-.058ZM10 0C7.285 0 6.945.012 5.879.059 4.816.105 4.086.277 3.453.523A4.88 4.88 0 0 0 1.68 1.68 4.9 4.9 0 0 0 .523 3.45C.277 4.085.105 4.811.06 5.874.012 6.945 0 7.285 0 10s.012 3.055.059 4.121c.046 1.063.218 1.793.464 2.426.258.66.598 1.219 1.157 1.773a4.888 4.888 0 0 0 1.77 1.153c.636.246 1.362.418 2.425.465 1.066.046 1.406.058 4.121.058 2.715 0 3.055-.012 4.121-.058 1.063-.047 1.793-.22 2.426-.465a4.888 4.888 0 0 0 1.77-1.153 4.888 4.888 0 0 0 1.152-1.77c.246-.636.418-1.363.465-2.425.047-1.066.058-1.406.058-4.121 0-2.715-.011-3.055-.058-4.121-.047-1.063-.22-1.793-.465-2.426A4.683 4.683 0 0 0 18.32 1.68 4.889 4.889 0 0 0 16.55.527C15.915.281 15.188.11 14.126.062 13.055.012 12.715 0 10 0Z"/><path  d="M10 4.863A5.138 5.138 0 0 0 4.863 10a5.138 5.138 0 0 0 10.273 0c0-2.836-2.3-5.137-5.136-5.137Zm0 8.469a3.333 3.333 0 1 1 .001-6.665A3.333 3.333 0 0 1 10 13.332ZM16.54 4.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg></a> 
+	</header>
+    <ul class="links huge">
+        <li><a href="https://medium.com/@hadzimarko" class="link" data-media="media/medium.webm" target="_blank">Medium Articles</a></li>
+        <li><a href="https://www.behance.net/uxuimax" class="link" data-media="media/behance.webm" target="_blank">Behance UXUI Case Studies</a></li>
+        <li><a href="https://dribbble.com/uxuimax" class="link" data-media="media/dribbble.webm" target="_blank">Dribbble X/periments</a></li>
+    </ul>
+
+    <ul class="links smaller">
+        <li><a href="https://uxuimax.com" class="link" data-media="media/course.webm" target="_blank">[UXUI MAX] <span class="darker">TBA</span></a></li>
+    </ul>
+</div>
+
+<video class="background-video hidden" id="backgroundVideo" autoplay muted loop></video>
+<img class="background-image hidden" id="backgroundImage" alt="cover-art">
+
+<script src="script.js"></script>
 </body>
 </html>
