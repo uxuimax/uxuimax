@@ -1,1 +1,1 @@
-<img width="1280" height="640" alt="repo-cover" src="https://github.com/user-attachments/assets/080bb6ac-cdca-42df-b83d-88739ed02e0c" />
+<img width="1280" height="640" alt="cover-image" src="https://github.com/user-attachments/assets/6d50f3fa-a9b8-4cc6-976f-3759b5e7a703" />
