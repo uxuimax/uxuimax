@@ -1,100 +1,84 @@
-// Get video, image elements
-const videoElement = document.getElementById('backgroundVideo');
-const imageElement = document.getElementById('backgroundImage');
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".carousel");
+  const imageWidth = 232; // Image width
+  const gap = 20; // Gap between images
+  const step = 1; // Scrolling step in pixels
+  let scrollPosition = 0;
 
-// Function to check if the screen is mobile
-function isMobileScreen() {
-    return window.innerWidth <= 768;
-}
+  function scrollCarousel() {
+    scrollPosition += step;
 
-// Function to show the video
-function showVideo(source) {
-    if (isMobileScreen()) return; // Disable on mobile screens
-    imageElement.classList.add('hidden'); // Hide image if visible
-    videoElement.src = source;
-    videoElement.classList.remove('hidden');
-    videoElement.style.opacity = 1; // Fade in video
-}
-
-// Function to show the image
-function showImage(source) {
-    if (isMobileScreen()) return; // Disable on mobile screens
-    videoElement.classList.add('hidden'); // Hide video if visible
-    imageElement.src = source;
-    imageElement.classList.remove('hidden');
-    imageElement.style.opacity = 1; // Fade in image
-}
-
-// Function to hide both video and image immediately
-function hideMedia() {
-    videoElement.style.opacity = 0;
-    imageElement.style.opacity = 0;
-    videoElement.classList.add('hidden');
-    imageElement.classList.add('hidden');
-}
-
-// Initialize event listeners only if not on mobile screen
-function initializeHoverEffects() {
-    if (!isMobileScreen()) {
-        document.querySelectorAll('.link').forEach(link => {
-            link.addEventListener('mouseenter', handleMouseEnter);
-            link.addEventListener('mouseleave', handleMouseLeave);
-        });
+    // If the first image scrolls out of view, move it to the end
+    const firstImage = carousel.children[0];
+    const totalVisibleWidth = carousel.offsetWidth;
+    if (scrollPosition >= imageWidth + gap) {
+      scrollPosition -= imageWidth + gap;
+      carousel.appendChild(firstImage); // Move the first image to the end
     }
-}
 
-// Remove hover event listeners on mobile screens
-function removeHoverEffects() {
-    document.querySelectorAll('.link').forEach(link => {
-        link.removeEventListener('mouseenter', handleMouseEnter);
-        link.removeEventListener('mouseleave', handleMouseLeave);
-    });
-}
+    // Apply the translation
+    carousel.style.transform = `translateX(-${scrollPosition}px)`;
 
-// Handlers for mouse enter and leave
-function handleMouseEnter(event) {
-    const mediaSource = event.target.getAttribute('data-media');
-    if (mediaSource.endsWith('.webm')) {
-        showVideo(mediaSource);
-    } else if (mediaSource.endsWith('.jpg') || mediaSource.endsWith('.png')) {
-        showImage(mediaSource);
-    }
-}
+    // Continue the animation
+    requestAnimationFrame(scrollCarousel);
+  }
 
-function handleMouseLeave() {
-    hideMedia();
-}
+  // Clone images to ensure smooth looping
+  const images = Array.from(carousel.children);
+  images.forEach((img) => {
+    const clone = img.cloneNode(true);
+    carousel.appendChild(clone);
+  });
 
-// Check screen size on load and resize
-function setupResponsiveHover() {
-    if (isMobileScreen()) {
-        removeHoverEffects();
-    } else {
-        initializeHoverEffects();
-    }
-}
-
-// Run setup on initial load
-setupResponsiveHover();
-
-// Re-run setup when resizing the window
-window.addEventListener('resize', setupResponsiveHover);
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Select the header and all links
-    const header = document.querySelector('header');
-    const links = document.querySelectorAll('.links li');
-
-    // Apply animation to header
-    header.style.animation = `fadeIn 0.8s ease forwards`;
-
-    // Delay in milliseconds for each link
-    let delay = 300;
-
-    // Apply animation with incremental delay to each link
-    links.forEach((link, index) => {
-        link.style.animation = `fadeIn 0.8s ease forwards`;
-        link.style.animationDelay = `${delay * (index + 1)}ms`;
-    });
+  // Start the infinite scroll
+  scrollCarousel();
 });
+
+
+
+let currentQuote = 0;
+
+function showQuote(index) {
+  const quotes = document.querySelectorAll('.quote');
+  const dots = document.querySelectorAll('.dot');
+
+  quotes[currentQuote].classList.remove('active');
+  dots[currentQuote].classList.remove('active');
+
+  currentQuote = index;
+
+  quotes[currentQuote].classList.add('active');
+  dots[currentQuote].classList.add('active');
+}
+
+// Auto-switch quotes every 5 seconds
+setInterval(() => {
+  const nextQuote = (currentQuote + 1) % document.querySelectorAll('.quote').length;
+  showQuote(nextQuote);
+}, 20000);
+
+// Function to handle elements appearing on scroll
+      const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                  observer.unobserve(entry.target); // Stop observing once visible
+              }
+          });
+      });
+
+      // Select all elements with the class 'content'
+      const contentElements = document.querySelectorAll('.in');
+
+      // Observe each element
+      contentElements.forEach(element => observer.observe(element));
+
+
+function copyToClipboard() {
+  const textToCopy = document.getElementById('copy-text').textContent;
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    alert('Text copied to clipboard!');
+  }).catch((err) => {
+    console.error('Failed to copy text: ', err);
+  });
+}
