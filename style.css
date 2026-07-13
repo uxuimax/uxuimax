@@ -6,7 +6,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 * {padding:0;margin:0;box-sizing:border-box;}
 html, body {scroll-behavior:smooth;-webkit-text-size-adjust:100%;font-size: 100%;}
 
-body {font-family: "Inter", sans-serif;font-optical-sizing: auto;font-weight: 500;font-style: normal;font-size:18px;background-color:#000000;color:#ffffff;}
+body {font-family: "Inter", sans-serif;font-optical-sizing: auto;font-weight: 500;font-style: normal;font-size:18px;background-color:#000000;color:#ffffff !important;}
 
 .header{position:fixed;top:0;left:0;width:100%;z-index:9997;background: rgba(0, 0, 0, 0.6);backdrop-filter: blur(10px);overflow-y: hidden;transition: 0.3s;}
 .logo{height:32px;float:left;fill:#ffffff;transition: fill 0.3s ease;}
@@ -18,12 +18,7 @@ body {font-family: "Inter", sans-serif;font-optical-sizing: auto;font-weight: 50
 #desknav ul li a:hover{color:#05C3FF;}
 .social{height:18px;float:right;margin-left:20px;margin-top:10px;fill:#ffffff;transition: fill 0.3s ease;}
 .social:hover{fill:#64D2FF;}
-.overlay {z-index:9999 !important;height: 0%;width: 100%;position: fixed;top: 0;left: 0;background: rgba(242, 242, 242, 0.6);backdrop-filter: blur(20px);overflow-y: hidden;transition: 0.5s;}
-.overlay-content ul{margin-top:80px;}
-.overlay-content li{list-style:none;margin-bottom:20px;}
-.overlay a {text-decoration: none;font-size:48px;line-height:1;font-weight:700;letter-spacing: -2px;color:#000000;display: block;transition: 0.3s;}
-.overlay a:hover, .overlay a:focus {color:#05C3FF;}
-.overlay .closebtn {font-size: 48px;text-align:right;margin:0;padding:0;}
+
 
 footer{display:block;width:100%;padding-top:150px;padding-bottom:150px;background-color:#000000;color:#f2f2f2;}
 .logo-footer{height:32px;fill:#f2f2f2;transition: all 0.3s ease;}
@@ -64,7 +59,7 @@ small{font-size:0.6em;}
 .justify{text-align:justify;justify-content: left;}
 
 .list{padding: 0;margin: 0;list-style-type: none;}
-.done{background: url('https://uxuimax.com/wp-content/uploads/2025/02/done.svg');background-position: 0 3px;background-repeat:no-repeat;padding-left: 40px;line-height:1.4;margin-bottom:15px;}
+.done{background: url('media/done.svg');background-position: 0 3px;background-repeat:no-repeat;padding-left: 40px;line-height:1.4;margin-bottom:15px;}
 
 .avatar{overflow:hidden;border-radius:50%;max-width:150px;margin-bottom:20px;}
 .icons{height:24px;margin-right:20px;margin-top:20px;fill:#000000;transition: all 0.3s ease;}
@@ -93,46 +88,13 @@ line-height:1;color:#f2f2f2 !important;text-decoration:none; border-radius:6px;b
 .ct {transition: transform 0.3s ease;margin-bottom:10px;}
 .ct:hover {transform: translateY(-5px);}
 
-.ig-grid {display: grid;grid-template-columns: repeat(3, 1fr);gap: 10px;padding:20px;}
-.ig {border-radius:12px;min-height:200px;position: relative;padding:0;display: flex;flex-direction: column;}
 
-.single-article{width:100%;border-radius:12px;overflow:hidden;background-color:#ffffff;margin-bottom:20px;}
-.single-article a{color:#000000 !important;text-decoration: none;transition: all 0.3s ease;}
-.single-article a:hover{color: #05C3FF !important;}
-.bg-post-img{width:50%;height:250px;float:left;}
-.single-article-info{width:50%;min-height:250px;height:100%;padding:20px;float:left;position:relative;}
-.custom-field-container {position:absolute;bottom:20px;}
-.custom-field-duration, .custom-field-files {display: inline-block;line-height:1;color:#C7C7CC;font-size:14px;margin-right:10px;}
-.custom-field-icon {width: 24px;height: 24px;margin-right: 5px;margin-top:-3px;}
-.custom-field-files a {color:#C7C7CC !important;text-decoration: none;}
-.custom-field-files a:hover {text-decoration: none;color:#05C3FF;}
-
-
-.custom-field-container-single {position:relative;top:40px;margin-left:8em;}
-.contents{width:calc(100% - 40px);background-color:#ffffff;border-radius:12px;overflow:hidden;padding-bottom:100px;margin:0 auto !important;display:block;}
-.contents p{padding:0 8em;}
-
-.wpb-posts-nav {background-color:#ff0000;border-radius:12px;overflow:hidden;max-width: 1200px;width:100%;height:250px;margin: 0 auto;}
-  
 
   
 
  
 
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-/* hbp */
-.browser-size{width:100%;height:100vh;position: relative;}
-.browser-center{position: relative;text-align:center;height: 100%;display: flex;flex-direction: column;align-items: center;justify-content: center;}
-.half-full{float:left;width: 50%;height:100vh;margin:0;position:relative;}
-.half-full-content{position: relative;text-align:left;height: 100%;display: flex;flex-direction: column;align-items: start;justify-content: center;padding-left:80px;padding-right:80px;}
-.typography{background-image:url('https://uxuimax.com/wp-content/uploads/2025/02/book-left-side.jpg');background-size:cover;background-position:top right;}
-.illustrations{background-image:url('https://uxuimax.com/wp-content/uploads/2025/02/book-right-side.jpg');background-size:cover;background-position:top left;}
-.hbp-footer{background-image:url('https://uxuimax.com/wp-content/uploads/2025/02/hbp-footer.jpg');background-size:cover;background-position:center bottom;}
-
-.paypal input{width:auto;text-align:center;}
-.paypal form{margin:0 auto;}
-.book-quote{text-align: center;max-width: 600px;margin:0 auto;}
 
 /* 1on1 */
 .video-section {top:0;position: relative;overflow: hidden;width: 100%;height:100vh;}
@@ -149,14 +111,7 @@ line-height:1;color:#f2f2f2 !important;text-decoration:none; border-radius:6px;b
 .check{background: url('https://uxuimax.com/wp-content/uploads/2025/02/check.svg');background-position: 0 7px;background-repeat:no-repeat;padding-left: 30px;line-height:1.6;margin-bottom:10px;}
 .blue{color: #64D2FF;}
 .enroll{min-height:250px;border-radius:12px;background-image:url('https://uxuimax.com/wp-content/uploads/2025/02/enroll-bg.png');background-size:cover;padding-top:60px;}
-form{max-width:600px;margin:0 auto;margin-top:60px;margin-bottom:40px;}
-input {background-color:#f2f2f2;border-radius:6px;outline:0;border:1px solid #f2f2f2;padding:10px;width:100%;margin-bottom:10px;-webkit-appearance:none;transition: all 0.5s ease;color:#000000;}
-input:focus {background-color:#f2f2f2;border:1px solid #ffffff;}
-input::placeholder{color:#000000 !important;}
-.wpcf7-not-valid-tip{font-size:10px !important;}
-input[type=submit]{width:150px;display:block;margin:0 auto;margin-top:10px;padding:1em 1.5em;cursor:pointer;outline:none;-webkit-appearance:none;transition: all 0.3s ease;
-line-height:1;color:#f2f2f2 !important;font-size:16px;text-decoration:none; border-radius:6px;border:0;background:#000000 !important;}
-input[type=submit]:focus, input[type=submit]:hover{background:#ffffff !important;color:#000000 !important;}
+
 
 .copy-box {width:100%;padding: 40px;border-radius: 12px;background-color: #111111;}
 .copy-box p {margin: 0;font-size: 14px;font-weight:normal;}
